@@ -1,28 +1,29 @@
 package JavaCoding;
 
-public class RemoveDuplicates {
-    	public static void main(String[] args) {
-        System.out.println(frequencyOfCharacters("AAABBCDD"));
-    }
 
-    public static String frequencyOfCharacters(String word){
-        String letter = "";
-        for (int i = 0; i < word.length(); i++){
-            if (!letter.contains("" + word.charAt(i))){
-                letter += "" + word.charAt(i);
-            }
-        }
-        String result = "";
-        for (int i = 0; i < letter.length(); i++){
-            int count = 0;
-            for (int j = 0; j < word.length(); j++){
-                if(letter.charAt(i) == word.charAt(j)){
-                    count++;
-                }
-            }
-            result += letter.charAt(i) + "" + count;
-        }
-        return result;
-    }
+import java.util.Arrays;
 
-}
+public class SameLetter {
+
+        public static void main(String[] args) {
+        System.out.println(removeDuplicate("AAABBBCCC" ));
+        }
+public static String removeDuplicate (String word){
+
+        String str = "AAABBBCCC";
+        String unique = "";
+
+        for (int i = 0; i < str.length(); i++){
+        if (!unique.contains("" + str.charAt(i))){
+        unique += str.charAt(i);
+        }
+        }
+
+        return unique;
+
+
+        }
+
+
+        }
+
